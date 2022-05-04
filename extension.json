@@ -1,0 +1,32 @@
+{
+    "name": "secinject",
+    "version": "v0.0.0",
+    "command_name": "secinject",
+    "extension_author": "c2biz",
+    "original_author": "apokryptein",
+    "repo_url": "https://github.com/sliverarmory/secinject",
+    "help": "Section Mapping Process Injection",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+      {
+        "os": "windows",
+        "arch": "amd64",
+        "path": "secinject.x64.o"
+      }
+    ],
+    "arguments": [
+      {
+        "name": "pid",
+        "desc": "process id",
+        "type": "int",
+        "optional": false
+      },
+      {
+        "name": "bin",
+        "desc": "/local/path/to/shellcode.bin",
+        "type": "file",
+        "optional": false
+      }
+    ]
+  }
